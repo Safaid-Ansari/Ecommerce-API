@@ -9,17 +9,17 @@
 
 # How to use 
 
-URL : http://localhost:8000/Products 
+URL : http://localhost:8000/Products .
 
-• Post request (/Products/create);
-• get request (/Products);
-• patch request (/Products/id/update_quantity);
-• delete request (/Products/id);  
+• Post request (/Products/create).
+• get request (/Products).
+• patch request (/Products/id/update_quantity).
+• delete request (/Products/id).
 
 # Folder Structure
 
 • Entry point : index.js.
-• config : Contains configuration files of Mongoose
-• controllers : The controllers for various urls like create,get,update,delete,
-• models : Mongoose Schemas for the products
+• config : Contains configuration files of Mongoose.
+• controllers : The controllers for various urls like create,get,update,delete.
+• models : Mongoose Schemas for the products.
 • routes : Different routes for different request urls.
