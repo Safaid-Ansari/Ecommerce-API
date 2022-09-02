@@ -13,10 +13,14 @@ app.use(express.json());
 
 app.use("/products", router);
 app.get("/", (req, res) => {
-  res.send("<h1>Welcome to Ecommerce API </h1>");
+  res.send(
+    "<body style='background-color:cyan'><h1 style='text-align:center; font-size:50px'>Welcome to Ecommerce API </h1></body>"
+  );
 });
 app.get("*", (req, res) => {
-  res.send("<h1>404</h1>");
+  res.send(
+    "<body style='background-color:cyan'><h1 style='text-align:center; font-size:50px'>ERROR 404 </h1></body>"
+  );
 });
 
 app.listen(port, () => {
