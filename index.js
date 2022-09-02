@@ -12,6 +12,9 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 app.use("/products", router);
+app.get("/", (req, res) => {
+  res.send("<h1>Welcome to Ecommerce API </h1>");
+});
 
 app.listen(port, () => {
   console.log("my server is running at port No ", port);
