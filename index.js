@@ -15,6 +15,9 @@ app.use("/products", router);
 app.get("/", (req, res) => {
   res.send("<h1>Welcome to Ecommerce API </h1>");
 });
+app.get("*", (req, res) => {
+  res.send("<h1>404</h1>");
+});
 
 app.listen(port, () => {
   console.log("my server is running at port No ", port);
