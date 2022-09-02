@@ -1,7 +1,6 @@
 const express = require("express");
 const app = express();
-var bodyParser = require("body-parser");
-
+const bodyParser = require("body-parser");
 const db = require("./config/connection");
 const Products = require("./modals/ECommerceSchema");
 const router = require("./routes/index");
