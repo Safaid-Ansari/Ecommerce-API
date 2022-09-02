@@ -1,12 +1,15 @@
 const express = require("express");
 const app = express();
+var bodyParser = require("body-parser");
+
 const db = require("./config/connection");
 const Products = require("./modals/ECommerceSchema");
 const router = require("./routes/index");
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 // for environment variable
 require("dotenv").config();
-console.log(process.env.port);
 
 const port = process.env.PORT || 3000;
 app.use(express.json());

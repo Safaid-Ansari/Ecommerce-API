@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 // Here we are defining the structure of the document
-const CommerceSchema = new mongoose.Schema({
+const ProductSchema = new mongoose.Schema({
   name: {
     type: String,
     required: true,
@@ -12,6 +12,6 @@ const CommerceSchema = new mongoose.Schema({
   },
 });
 
-const Products = mongoose.model("Products", CommerceSchema);
+const Products = mongoose.model("Products", ProductSchema);
 
 module.exports = Products;

@@ -7,10 +7,21 @@ module.exports.create = async function (req, res) {
       name: req.body.name,
       quantity: req.body.quantity,
     });
-    const InsertMens = await createdProduct.save();
-    res.status(201).send(InsertMens);
+
+    return res.status(200).json({
+      success: true,
+
+      data: {
+        product: createdProduct,
+      },
+      message: " created successfully ",
+    });
   } catch (e) {
-    res.status(400).send(e);
+    console.log("ERROR", e);
+    return res.status(500).json({
+      success: false,
+      message: e.getMessage,
+    });
   }
 };
 
@@ -69,7 +80,8 @@ module.exports.update = async function (req, res) {
 
     const updateProduct = await Products.findById(id);
     // console.log(typeof req.query.number);
-    updateProduct.quantity += parseInt(req.query.number);
+    let preQuantity = updateProduct.quantity;
+    updateProduct.quantity = Number(req.query.number) + Number(preQuantity);
     updateProduct.save();
 
     if (!updateProduct) {

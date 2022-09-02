@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
-  //   "mongodb+srv://SafaidAnsari:iBcR2P7fTHF4UZBx@cluster0.vmqnisk.mongodb.net/Ecommerce-API",
-  "mongodb://localhost:27017/ECommerce-API",
+  "mongodb+srv://SafaidAnsari:iBcR2P7fTHF4UZBx@cluster0.vmqnisk.mongodb.net/Ecommerce-API",
+  // "mongodb://localhost:27017/ECommerce-API",
   { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
