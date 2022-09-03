@@ -11,7 +11,7 @@
 
 # How to use 
 
-URL : http://localhost:8000/Products .
+URL : https://ecommerce-api-node1.herokuapp.com/products .
 
 • Post request (/Products/create).
 
