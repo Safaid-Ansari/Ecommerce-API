@@ -13,13 +13,13 @@
 
 URL : https://ecommerce-api-node1.herokuapp.com/products .
 
-• Post request (/Products/create).
+• Post request (/products/create).
 
-• get request (/Products).
+• get request (/products).
 
-• patch request (/Products/id/update_quantity/?number=10).
+• patch request (/products/id/update_quantity/?number=10).
 
-• delete request (/Products/id).
+• delete request (/products/id).
 
 # Folder Structure
 
